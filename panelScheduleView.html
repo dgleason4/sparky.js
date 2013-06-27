@@ -1,0 +1,25 @@
+<div class="flex vert panelSched">
+	<div class="flex vert panelHeader">
+		<h1 class="flex center" data-ng-bind="pname"></h1>
+		<h3 class="flex center" data-ng-bind="pvolt"></h3>
+		<h3 class="flex center" data-ng-bind="pamp"></h3>
+  </div>
+	
+	<div class="flex horiz">
+		<table class="table-striped" style="width:50%">
+			<tbody>
+				<tr data-ng-repeat="circuit in circuitsOdd">
+					<td>{{($index*2)+1}}</td><td><input data-ng-type="text" data-ng-model="circuit.name" class="ckt"/></td>
+				</tr>
+			</tbody>
+		</table>
+					
+		<table class="table-striped" style="width:50%">
+			<tbody>
+				<tr data-ng-repeat="circuit in circuitsEven">
+					<td><input data-ng-type="text" data-ng-model="circuit.name" class="ckt"/></td><td>{{($index+1)*2}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
